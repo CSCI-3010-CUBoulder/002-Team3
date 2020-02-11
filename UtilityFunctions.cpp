@@ -14,6 +14,7 @@ int Factorial(int n){
   return factorial;
 }
 
+
 std::string Join(std::vector<std::string> pieces, std::string glue) {
 	std::string result = "";
 	for ( int i = 0; i < pieces.size()-1; i++ ) {
@@ -24,6 +25,7 @@ std::string Join(std::vector<std::string> pieces, std::string glue) {
 	return result;
 }
 
+
 //If the input is positive or 0 it returns true
 bool IsPositive(const int &a){
 	if{ a >= 0 ){
@@ -33,6 +35,7 @@ bool IsPositive(const int &a){
 		return false;
 	}
 }
+
 
 int Sign(int num)
 {
