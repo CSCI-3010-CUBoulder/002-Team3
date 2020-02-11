@@ -28,7 +28,7 @@ std::string Join(std::vector<std::string> pieces, std::string glue) {
 
 //If the input is positive or 0 it returns true
 bool IsPositive(const int &a){
-	if{ a >= 0 ){
+	if( a >= 0 ){
 		return true;
 	}
 	else{
