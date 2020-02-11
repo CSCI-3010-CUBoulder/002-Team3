@@ -11,7 +11,7 @@ main: UtilityFunctions.o
 main.o: UtilityFunctions.cpp UtilityFunctions.h
 =======
 main: main.o UtilityFunctions.o
-	$(CXX) $(CXXFLAGS) -o main UtilityFunctions.o
+	$(CXX) $(CXXFLAGS) -o main main.o UtilityFunctions.o
 
 UtilityFunctions.o: main.cpp UtilityFunctions.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
