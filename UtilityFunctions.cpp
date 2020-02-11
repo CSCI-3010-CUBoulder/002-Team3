@@ -15,6 +15,7 @@ int Factorial(int n){
 }
 
 
+
 std::string Join(std::vector<std::string> pieces, std::string glue) {
 	std::string result = "";
 	for ( int i = 0; i < pieces.size()-1; i++ ) {
@@ -37,6 +38,7 @@ bool IsPositive(const int &a){
 }
 
 
+
 int Sign(int num)
 {
     if(num == -num){
@@ -47,4 +49,5 @@ int Sign(int num)
     }
 
 };
+
 

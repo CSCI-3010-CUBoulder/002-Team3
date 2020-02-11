@@ -6,11 +6,18 @@ all: main
 
 main: main.o UtilityFunctions.o
 	$(CXX) $(CXXFLAGS) -o main main.o UtilityFunctions.o
-
+	
+test: test.o UtilityFunctions.o
+	$(CXX) $(CXXFLAGS) -o test test.o UtilityFunctions.o
+	
+test.o: test.cpp UtilityFunctions.h
+	$(CXX) $(CXXFLAGS) -c test.cpp
+	
 UtilityFunctions.o: main.cpp UtilityFunctions.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
 UtilityFunctions.o: UtilityFunctions.cpp UtilityFunctions.h
+
 	$(CXX) $(CXXFLAGS) -c UtilityFunctions.cpp
 
 
