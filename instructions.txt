@@ -1,0 +1,1 @@
+take iteger n return positive or negative indication, implement sum function that takes a vec of ints and sums it, then returns sum
