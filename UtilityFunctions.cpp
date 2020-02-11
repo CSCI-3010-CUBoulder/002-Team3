@@ -1,4 +1,18 @@
 #include "UtilityFunctions.h"
+#include <iostream>
+// takes an int, n, and returns the factorial of that int (n!)
+int Factorial(int n){
+  int factorial=1;
+  if(n>=0){
+    for(int i=n;i>1;i--){
+      factorial=factorial*i;
+    }
+  }
+  else{
+    factorial=-1;
+  }
+  return factorial;
+}
 
 std::string Join(std::vector<std::string> pieces, std::string glue) {
 	std::string result = "";
@@ -12,7 +26,7 @@ std::string Join(std::vector<std::string> pieces, std::string glue) {
 
 int Sign(int num)
 {
-    if(num = -num){
+    if(num == -num){
         return -1;
     }
     else{
