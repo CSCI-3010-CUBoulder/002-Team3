@@ -5,7 +5,7 @@ CXXFLAGS = -std=c++17 -Wall  # flags for the compiler (use c++17 standards, turn
 all: main
 
 main: main.o UtilityFunctions.o
-	$(CXX) $(CXXFLAGS) -o main UtilityFunctions.o
+	$(CXX) $(CXXFLAGS) -o main main.o UtilityFunctions.o
 
 UtilityFunctions.o: main.cpp UtilityFunctions.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
