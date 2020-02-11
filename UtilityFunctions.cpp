@@ -9,3 +9,14 @@ std::string Join(std::vector<std::string> pieces, std::string glue) {
 	result += pieces[pieces.size()-1];
 	return result;
 }
+
+int Sign(int num)
+{
+    if(num = -num){
+        return -1;
+    }
+    else{
+        return 1;
+    }
+
+};
