@@ -1,18 +1,20 @@
 CXX = g++  # the compiler
-CXXFLAGS = -std=c++17 -Wall  # flags for the compiler (use c++17 standards, turn on all optional warnings); add -ggdb if you want to use gdb to debug!
+CXXFLAGS = -std=c++17 -Wall  # flags for the compiler (use c++11 standards, turn on all optional warnings)
+GDBINFO = -ggdb # include this to generate info needed to run gdb
 
+run: all
+	./test
 
-all: main
+all: main test
 
-main: main.o UtilityFunctions.o
-	$(CXX) $(CXXFLAGS) -o main main.o UtilityFunctions.o
+clean:
+	rm UtilityFunctions.o main test
 
-UtilityFunctions.o: main.cpp UtilityFunctions.h
-	$(CXX) $(CXXFLAGS) -c main.cpp
+test: UtilityFunctions.o test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp UtilityFunctions.o -o test
 
-UtilityFunctions.o: UtilityFunctions.cpp UtilityFunctions.h
+main: UtilityFunctions.o main.cpp
+	$(CXX) $(CXXFLAGS) main.cpp UtilityFunctions.o -o main
+
+UtilityFunctions.o: UtilityFunctions.cpp
 	$(CXX) $(CXXFLAGS) -c UtilityFunctions.cpp
-
-
-clean: 
-	rm main *.o
